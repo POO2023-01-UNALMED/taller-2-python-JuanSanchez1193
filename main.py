@@ -23,18 +23,18 @@ class Auto:
     def cantidadAsientos(self):
         contador = 0
         for i in self.asientos:
-            if (i != "none"):
+            if (i != None):
                 contador += 1
         return contador
 
     def verificarIntegridad(self):
         if self.registro == self.motor.registro:
             for i in self.asientos:
-                if i != "none":
+                if i != None:
                     if i.registro != self.registro:
-                        return "las piezas..."
+                        return "las piezas no son originales"
                 else:
-                    return "Auto Original"
+                    return "Auto original"
 
 
 
