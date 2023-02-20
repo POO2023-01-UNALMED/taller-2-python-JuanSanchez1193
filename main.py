@@ -28,10 +28,9 @@ class Auto:
         return contador
 
     def verificarIntegridad(self):
-        if self.registro == self.motor.registro:
             for i in self.asientos:
                 if i != None:
-                    if i.registro != self.registro:
+                    if (i.registro != self.registro) or (self.registro != self.motor.registro):
                         return "las piezas no son originales"
                 else:
                     return "Auto original"
